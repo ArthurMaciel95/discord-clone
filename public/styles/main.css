@@ -1,0 +1,733 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: #131313;
+  font-family: "Inter", sans-serif;
+}
+
+.users {
+  cursor: pointer;
+  padding: 5px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+  -webkit-transition: 0.3s background ease;
+  transition: 0.3s background ease;
+  width: 100%;
+}
+
+.users:hover {
+  background-color: #292929;
+  -webkit-transition: 0.3s background ease;
+  transition: 0.3s background ease;
+}
+
+.users .image-users-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.users .image-users-area img {
+  margin-right: 8px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 40px;
+  width: 40px;
+}
+
+.users .info-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.users .info-user .info-users-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.users .info-user .info-users-header h3 {
+  font-size: 0.7em;
+  color: #c5c5c5;
+}
+
+.users .info-user .info-users-header time {
+  font-size: 0.6rem;
+  color: #a3a3a3;
+}
+
+.users .info-user .info-users-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.users .info-user .info-users-body article {
+  color: #777777;
+  font-size: 0.7rem;
+}
+
+.users .info-user .info-users-body .notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: #f82e2e;
+  width: 1rem;
+  height: 1rem;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.users .info-user .info-users-body .notification p {
+  color: white;
+  font-size: x-small;
+}
+
+.fas {
+  color: rgba(102, 102, 102, 0.945);
+}
+
+i {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+main aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  min-width: 70px;
+  max-width: 10vw;
+  background-color: #222222;
+  border-right: 2px solid #1a1a1a;
+}
+
+main aside .servers {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40vh;
+}
+
+main aside .servers li img {
+  background-color: #161616;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+main aside .notifications {
+  padding-bottom: 10px;
+}
+
+main aside .notifications .mute {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+main aside .notifications .notification-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+main aside .notifications .image-servers-area img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 40px;
+  border-radius: 50%;
+}
+
+main .contacts {
+  padding: 10px 15px;
+  background-color: #222222;
+  width: 20vw;
+  min-width: 250px;
+  border-right: 2px solid #1a1a1a;
+}
+
+main .contacts .contacts-header .wrapper-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .contacts .contacts-header .wrapper-contacts img {
+  height: 30px;
+  width: 30px;
+}
+
+main .contacts .contacts-header .wrapper-contacts h3 {
+  font-size: 0.7rem;
+  color: #c5c5c5;
+}
+
+main .contacts .contacts-header .input-area input[type="text"] {
+  width: 100%;
+  background-color: #141414;
+  padding: 7px 11px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0px;
+}
+
+main .contacts .contacts-body .pinned .pinned-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .contacts .contacts-body .pinned .pinned-controls h4 {
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+  margin: 10px 0px;
+}
+
+main .contacts .contacts-body .pinned .pinned-controls i {
+  color: rgba(102, 102, 102, 0.945);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 10px 0px 10px 10px;
+}
+
+main .contacts .contacts-body .direct-messages .direct-messages-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .contacts .contacts-body .direct-messages .direct-messages-control h4 {
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+  margin: 10px 0px;
+}
+
+main .contacts .contacts-body .direct-messages .direct-messages-control i {
+  color: rgba(102, 102, 102, 0.945);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 10px 0px 10px 10px;
+}
+
+main .contacts .contacts-body .group-messages .group-messages-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .contacts .contacts-body .group-messages .group-messages-control h4 {
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+  margin: 10px 0px;
+}
+
+main .contacts .contacts-body .group-messages .group-messages-control i {
+  color: rgba(102, 102, 102, 0.945);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 10px 0px 10px 10px;
+}
+
+main .container-messages {
+  width: 55vw;
+  min-width: 420px;
+  padding: 0px 20px;
+  position: relative;
+}
+
+main .container-messages .container-messages-header {
+  z-index: 10111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222222;
+  padding: 5px 20px;
+  height: 10vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container-messages .container-messages-header .current-group-message-info .current-group-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container-messages .container-messages-header .current-group-message-info .current-group-name h3 {
+  font-size: 0.9rem;
+  color: #c5c5c5;
+}
+
+main .container-messages .container-messages-header .current-group-message-info .current-group-name i {
+  color: #8484d3;
+  margin-left: 10px;
+}
+
+main .container-messages .container-messages-header .current-group-message-info .current-group-member-info small {
+  color: rgba(102, 102, 102, 0.945);
+  font-size: 0.7rem;
+}
+
+main .container-messages .messages-area {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+}
+
+main .container-messages .messages-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+main .container-messages .messages-area::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+main .container-messages .messages-area::-webkit-scrollbar-thumb {
+  background: #5f5f5f;
+  border-radius: 25px;
+}
+
+main .container-messages .messages-area .user-message-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px 0px;
+}
+
+main .container-messages .messages-area .user-message-area .wrapper-div .container-message-user {
+  background-color: #292929;
+  color: #c5c5c5;
+  font-size: 0.7rem;
+  padding: 15px;
+  border-radius: 10px 10px 10px 0px;
+  max-width: 50%;
+}
+
+main .container-messages .messages-area .user-message-area .wrapper-div .container-message-user .container-message-user-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: 5px;
+}
+
+main .container-messages .messages-area .user-message-area .wrapper-div .container-message-user .container-message-user-header h3 {
+  font-weight: 600;
+}
+
+main .container-messages .messages-area .user-message-area .wrapper-div .container-message-user article {
+  font-weight: 400;
+}
+
+main .container-messages .messages-area .user-message-area img {
+  margin-right: 5px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40px;
+  height: 40px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+main .container-messages .messages-area .user-message-area p {
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+}
+
+main .container-messages .messages-area .your-message-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .container-messages .messages-area .your-message-area .container-message-user {
+  padding: 12px 20px;
+  color: #c5c5c5;
+  font-size: 0.7rem;
+  border-radius: 10px 10px 0px 10px;
+  width: 50%;
+  background-color: #354a66;
+}
+
+main .container-messages .messages-area .your-message-area .container-message-user .container-message-user-header {
+  padding-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container-messages .messages-area .your-message-area .container-message-user .container-message-user-header h3 {
+  font-weight: 700;
+}
+
+main .container-messages .input-message-area {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  z-index: 122;
+}
+
+main .container-messages .input-message-area input[type="text"] {
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #070707;
+  border-radius: 5px;
+  border: none;
+  color: #c5c5c5;
+}
+
+main .container-task {
+  background-color: #222222;
+  border-left: 2px solid #1a1a1a;
+  width: 20vw;
+  padding: 10px 15px;
+}
+
+main .container-task .task-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container-task .task-header .text-area h3 {
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+}
+
+main .container-task .task-header .icon-area i {
+  padding: 5px 7px;
+  border-radius: 4px;
+  background-color: #303030;
+}
+
+main .container-task .task-priority {
+  width: 100%;
+  height: 40%;
+}
+
+main .container-task .task-priority .task {
+  background-color: #303030;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+main .container-task .task-priority .task h4 {
+  color: #c5c5c5;
+  padding-bottom: 5px;
+  font-size: 0.7rem;
+}
+
+main .container-task .task-priority .task .progress-bar-area .progress-bar-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container-task .task-priority .task .progress-bar-area .progress-bar-info .progress-bar-background {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #292929;
+  border-radius: 3px;
+}
+
+main .container-task .task-priority .task .progress-bar-area .progress-bar-info .progress-bar-background .progress-bar {
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: goldenrod;
+  border-radius: 3px;
+}
+
+main .container-task .task-priority .task .progress-bar-area .progress-bar-info small {
+  padding-left: 10px;
+  color: goldenrod;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+main .container-task .task-priority .task .info-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container-task .task-priority .task .info-area .image-avatar-area img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+main .container-task .task-priority .task .info-area .more-info-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container-task .task-priority .task .info-area .more-info-area small {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 0.945);
+  padding-right: 10px;
+}
+
+main .container-task .share-files-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container-task .share-files-header h3 {
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+}
+
+main .container-task .share-files-header i {
+  padding: 5px 7px;
+  border-radius: 4px;
+  background-color: #303030;
+}
+
+main .container-task .menu-shared-files {
+  margin-top: 15px;
+}
+
+main .container-task .menu-shared-files .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+main .container-task .menu-shared-files .menu li {
+  padding: 6px 5px;
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+  cursor: pointer;
+}
+
+main .container-task .menu-shared-files .menu li.active {
+  color: #8484d3;
+  border-bottom: 2px solid #8484d3;
+}
+
+main .container-task .menu-shared-files .current-files .file {
+  margin-top: 8px;
+  padding: 5px 0px;
+  border-radius: 4px;
+  background-color: #131313;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container-task .menu-shared-files .current-files .file .file-image-area img {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .container-task .menu-shared-files .current-files .file .file-info-area h4 {
+  font-size: 0.7rem;
+  color: #c5c5c5;
+}
+
+main .container-task .menu-shared-files .current-files .file .file-info-area span {
+  font-size: 0.7rem;
+  color: rgba(102, 102, 102, 0.945);
+}
+
+main .container-task .menu-shared-files .current-files .file .icon-area {
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=main.css.map */
