@@ -8,7 +8,20 @@
 body {
   font-size: 16px;
   background-color: #131313;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #5f5f5f;
+  border-radius: 25px;
 }
 
 .users {
@@ -234,6 +247,22 @@ main .contacts {
   width: 20vw;
   min-width: 250px;
   border-right: 2px solid #1a1a1a;
+  overflow-y: auto;
+  -webkit-transition: position 0.4s ease;
+  transition: position 0.4s ease;
+}
+
+main .contacts::-webkit-scrollbar {
+  width: 6px;
+}
+
+main .contacts::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+main .contacts::-webkit-scrollbar-thumb {
+  background: #5f5f5f;
+  border-radius: 25px;
 }
 
 main .contacts .contacts-header .wrapper-contacts {
@@ -259,7 +288,7 @@ main .contacts .contacts-header .wrapper-contacts h3 {
   color: #c5c5c5;
 }
 
-main .contacts .contacts-header .input-area input[type="text"] {
+main .contacts .contacts-header .input-area input[type='text'] {
   width: 100%;
   background-color: #141414;
   padding: 7px 11px;
@@ -346,7 +375,6 @@ main .contacts .contacts-body .group-messages .group-messages-control i {
 main .container-messages {
   width: 55vw;
   min-width: 420px;
-  padding: 0px 20px;
   position: relative;
 }
 
@@ -502,16 +530,13 @@ main .container-messages .messages-area .your-message-area .container-message-us
   font-weight: 700;
 }
 
-main .container-messages .input-message-area {
+main .container-messages input[type='text'] {
   position: absolute;
-  width: 100%;
   bottom: 10px;
-  z-index: 122;
-}
-
-main .container-messages .input-message-area input[type="text"] {
   padding: 10px 15px;
-  width: 100%;
+  width: 90%;
+  left: 5%;
+  right: 5%;
   background-color: #070707;
   border-radius: 5px;
   border: none;
@@ -667,7 +692,7 @@ main .container-task .menu-shared-files .menu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 2px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
 }
 
 main .container-task .menu-shared-files .menu li {
@@ -729,5 +754,59 @@ main .container-task .menu-shared-files .current-files .file .icon-area {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-task {
+    display: none;
+  }
+  main .container-messages {
+    width: auto;
+    min-width: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contacts {
+    position: absolute;
+    left: -100%;
+    -webkit-transition: position 0.4s ease;
+    transition: position 0.4s ease;
+  }
+  main
+.container-messages
+.messages-area
+.user-message-area
+.wrapper-div
+.container-message-user {
+    max-width: 90%;
+  }
+  main
+.container-messages
+.messages-area
+.your-message-area
+.container-message-user {
+    width: 90%;
+  }
+  main .container-messages input[type='text'] {
+    position: fixed;
+    width: 65%;
+    left: 20%;
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main aside {
+    display: none;
+  }
+  main .container-messages input[type='text'] {
+    padding: 20px 18px;
+    font-size: 1.2rem;
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,99 +1,111 @@
 .contacts {
-    padding: 10px 15px;
-    background-color: $bg-color;
-    width: 20vw;
-    min-width: 250px;
-    border-right: 2px solid $color-border-container;
+  padding: 10px 15px;
+  background-color: $bg-color;
+  width: 20vw;
+  min-width: 250px;
+  border-right: 2px solid $color-border-container;
+  overflow-y: auto;
 
-    .contacts-header {
-      .wrapper-contacts {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-        img {
-         
-          height: 30px;
-          width: 30px;
-        }
-        h3 {
-          font-size: $xx-font-small;
-          color: rgb(197, 197, 197);
-        }
-        i {
-        }
+  transition: position 0.4s ease;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgb(48, 48, 48);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(95, 95, 95);
+    border-radius: 25px;
+  }
+
+  .contacts-header {
+    .wrapper-contacts {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      img {
+        height: 30px;
+        width: 30px;
       }
-      .input-area {
-        input[type="text"] {
-          width: 100%;
-          background-color: $input-color;
-          padding: 7px 11px;
-          border: none;
-          border-radius: 4px;
-          margin: 10px 0px;
-        }
+      h3 {
+        font-size: $xx-font-small;
+        color: rgb(197, 197, 197);
+      }
+      i {
       }
     }
-    .contacts-body {
-      .pinned {
-        .pinned-controls {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          h4 {
-            font-size: $xx-font-small;
-            color: $color-font-secondary;
-            margin: 10px 0px;
-          }
-          i {
-            color: $color-font-secondary;
-            font-size: 0.8rem;
-            cursor: pointer;
-            padding: 10px 0px 10px 10px;
-          }
-        }
-
-        .users-pinned {
-          // USER CONTAINER>
-        }
-      }
-      .direct-messages {
-        .direct-messages-control {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          h4 {
-            font-size: $xx-font-small;
-            color: $color-font-secondary;
-            margin: 10px 0px;
-          }
-          i {
-            color: $color-font-secondary;
-            font-size: 0.8rem;
-            cursor: pointer;
-            padding: 10px 0px 10px 10px;
-          }
-        }
-        // USER CONTAINER>
-      }
-      .group-messages {
-        .group-messages-control {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          h4 {
-            font-size: $xx-font-small;
-            color: $color-font-secondary;
-            margin: 10px 0px;
-          }
-          i {
-            color: $color-font-secondary;
-            font-size: 0.8rem;
-            cursor: pointer;
-            padding: 10px 0px 10px 10px;
-          }
-        }
-        // USER CONTAINER>
+    .input-area {
+      input[type='text'] {
+        width: 100%;
+        background-color: $input-color;
+        padding: 7px 11px;
+        border: none;
+        border-radius: 4px;
+        margin: 10px 0px;
       }
     }
   }
+  .contacts-body {
+    .pinned {
+      .pinned-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+          font-size: $xx-font-small;
+          color: $color-font-secondary;
+          margin: 10px 0px;
+        }
+        i {
+          color: $color-font-secondary;
+          font-size: 0.8rem;
+          cursor: pointer;
+          padding: 10px 0px 10px 10px;
+        }
+      }
+
+      .users-pinned {
+        // USER CONTAINER>
+      }
+    }
+    .direct-messages {
+      .direct-messages-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+          font-size: $xx-font-small;
+          color: $color-font-secondary;
+          margin: 10px 0px;
+        }
+        i {
+          color: $color-font-secondary;
+          font-size: 0.8rem;
+          cursor: pointer;
+          padding: 10px 0px 10px 10px;
+        }
+      }
+      // USER CONTAINER>
+    }
+    .group-messages {
+      .group-messages-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+          font-size: $xx-font-small;
+          color: $color-font-secondary;
+          margin: 10px 0px;
+        }
+        i {
+          color: $color-font-secondary;
+          font-size: 0.8rem;
+          cursor: pointer;
+          padding: 10px 0px 10px 10px;
+        }
+      }
+      // USER CONTAINER>
+    }
+  }
+}

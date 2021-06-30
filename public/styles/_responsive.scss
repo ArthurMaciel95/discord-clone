@@ -1,0 +1,54 @@
+@media screen and (max-width: 1200px) {
+  .container-task {
+    display: none;
+  }
+  main .container-messages {
+    width: auto;
+    min-width: auto;
+  }
+}
+
+@media screen and(max-width:700px) {
+  .contacts {
+    position: absolute;
+    left: -100%;
+    transition: position 0.4s ease;
+  }
+  main
+    .container-messages
+    .messages-area
+    .user-message-area
+    .wrapper-div
+    .container-message-user {
+    max-width: 90%;
+  }
+
+  main
+    .container-messages
+    .messages-area
+    .your-message-area
+    .container-message-user {
+    width: 90%;
+  }
+  main .container-messages input[type='text'] {
+    position: fixed;
+    width: 65%;
+    left: 20%;
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main aside {
+    display: none;
+  }
+
+  main .container-messages input[type='text'] {
+    padding: 20px 18px;
+    font-size: 1.2rem;
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+}

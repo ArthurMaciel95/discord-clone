@@ -1,187 +1,168 @@
 .container-task {
-    background-color: $bg-color;
-    border-left: 2px solid $color-border-container;
-    width: 20vw;
-    padding: 10px 15px;
+  background-color: $bg-color;
+  border-left: 2px solid $color-border-container;
+  width: 20vw;
+  padding: 10px 15px;
 
-    .task-header{
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .text-area {
+      h3 {
+        font-size: $xx-font-small;
+        color: $color-font-secondary;
+      }
+    }
+    .icon-area {
+      i {
+        padding: 5px 7px;
+        border-radius: 4px;
+        background-color: rgb(48, 48, 48);
+      }
+    }
+  }
+  .task-priority {
+    width: 100%;
+    height: 40%;
+
+    .task {
+      background-color: rgb(48, 48, 48);
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+
+      h4 {
+        color: $color-font-ice;
+        padding-bottom: 5px;
+        font-size: $xx-font-small;
+      }
+      .progress-bar-area {
+        .progress-bar-info {
+          display: flex;
+          align-items: center;
+          .progress-bar-background {
+            position: relative;
+            width: 100%;
+            height: 4px;
+            background-color: rgb(41, 41, 41);
+            border-radius: 3px;
+            .progress-bar {
+              position: absolute;
+              width: 75%;
+              height: 4px;
+              background-color: goldenrod;
+              border-radius: 3px;
+            }
+          }
+          small {
+            padding-left: 10px;
+            color: goldenrod;
+            font-weight: 700;
+            font-size: $xx-font-small;
+          }
+        }
+      }
+      .info-area {
         display: flex;
         justify-content: space-between;
+        margin-top: 20px;
         align-items: center;
-        .text-area{
-            
-                h3{
-                    font-size: $xx-font-small;
-                    color: $color-font-secondary;
-               
-                }
-            
-            }
-            .icon-area{
-                i{
-                    padding: 5px 7px;
-                    border-radius: 4px;
-                    background-color: rgb(48, 48, 48);
-                }
-        }
-    }
-    .task-priority {
-        width: 100%;
-        height:40%;
-       
-        .task {
-          background-color: rgb(48, 48, 48);
-          padding: 10px;
-          border-radius: 8px;
-          margin-top: 10px;
-          
-        h4 {
-            color: $color-font-ice;
-            padding-bottom: 5px;    
-            font-size: $xx-font-small;
-        }
-        .progress-bar-area {
-          .progress-bar-info {
-            display: flex;
-            align-items: center;
-            .progress-bar-background {
-                
-                position: relative;
-                width: 100%;
-                height: 4px;
-                background-color: rgb(41, 41, 41);
-                border-radius: 3px;
-                .progress-bar {
-                    position: absolute;
-                    width: 75%;
-                    height: 4px;
-                    background-color: goldenrod;
-                    border-radius: 3px;
-    
-                    
-                    
-                }
-                
-            }
-            small {
-                padding-left: 10px;
-                color: goldenrod;
-                font-weight: 700;
-                font-size: $xx-font-small;
-            }
-            
+        .image-avatar-area {
+          img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
           }
-         
         }
-        .info-area{
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            align-items: center;
-            .image-avatar-area{
-                
-                img{
-                    width: 30px;
-                    height: 30px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                }
-                
-            }
-            .more-info-area{
-                display: flex;
-    
-                small{
-                    font-size: $xx-font-small;
-                    font-weight: 400;
-                    color: $color-font-secondary;
-                    padding-right: 10px;
-                }
-                i{
-    
-                }
-            }
+        .more-info-area {
+          display: flex;
+
+          small {
+            font-size: $xx-font-small;
+            font-weight: 400;
+            color: $color-font-secondary;
+            padding-right: 10px;
+          }
+          i {
+          }
         }
       }
     }
-    .share-files-header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        h3{
-            font-size: $xx-font-small;
-            color: $color-font-secondary
-        }
-        i{
-            padding: 5px 7px;
-            border-radius: 4px;
-            background-color: rgb(48, 48, 48);
-        }
-    }
-    .menu-shared-files{
-        margin-top: 15px;
-        .menu{
-            
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            border-bottom: 1px solid $color-border-container;
-            li{
-                padding: 6px 5px;
-                font-size: $xx-font-small;
-                color: $color-font-secondary;
-                
-                cursor: pointer;
-            }
-            li.active{
-                color: rgb(132, 132, 211);
-                border-bottom: 2px solid rgb(132, 132, 211);
-            }
-        }
-        .current-files{
-            .file{
-                margin-top: 8px;
-                padding: 5px 0px;
-                border-radius: 4px;
-                background-color: $bg-message-container-color;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                .file-image-area{
-                    img{
-                        width: 35px;
-                        height: 35px;
-                        border-radius: 5px;
-                        object-fit: cover;
-                    }
-                }
-                .file-info-area{
-                    h4{
-                        font-size: $xx-font-small;
-                        color: $color-font-ice;
-                    }
-                    span{
-                        font-size: $xx-font-small;
-                        color: $color-font-secondary;
-                    }
-                }
-                .icon-area{
-                    background-color: $color-border-container;
-                    border-radius: 50%;
-                    height: 32px;
-                    width: 32px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    i{
-    
-                    }
-                }
-            }
-        }
-    }
-    
-    
   }
+  .share-files-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      font-size: $xx-font-small;
+      color: $color-font-secondary;
+    }
+    i {
+      padding: 5px 7px;
+      border-radius: 4px;
+      background-color: rgb(48, 48, 48);
+    }
+  }
+  .menu-shared-files {
+    margin-top: 15px;
+    .menu {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      border-bottom: 1px solid $color-border-container;
+      li {
+        padding: 6px 5px;
+        font-size: $xx-font-small;
+        color: $color-font-secondary;
 
-
+        cursor: pointer;
+      }
+      li.active {
+        color: rgb(132, 132, 211);
+        border-bottom: 2px solid rgb(132, 132, 211);
+      }
+    }
+    .current-files {
+      .file {
+        margin-top: 8px;
+        padding: 5px 0px;
+        border-radius: 4px;
+        background-color: $bg-message-container-color;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .file-image-area {
+          img {
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+            object-fit: cover;
+          }
+        }
+        .file-info-area {
+          h4 {
+            font-size: $xx-font-small;
+            color: $color-font-ice;
+          }
+          span {
+            font-size: $xx-font-small;
+            color: $color-font-secondary;
+          }
+        }
+        .icon-area {
+          background-color: $color-border-container;
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          i {
+          }
+        }
+      }
+    }
+  }
+}

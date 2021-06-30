@@ -11,7 +11,7 @@ $input-color: rgb(20, 20, 20);
 
 $color-font-ice: rgb(197, 197, 197);
 $color-font-secondary: rgba(102, 102, 102, 0.945);
-$color-border-container:rgb(26, 26, 26);
+$color-border-container: rgb(26, 26, 26);
 
 $xx-font-small: 0.7rem;
 $x-font-small: 0.9rem;
@@ -19,17 +19,24 @@ $-small-font: 1rem;
 $-medium-font: 1.3rem;
 $-large-font: 1.9rem;
 
-
-
-
 body {
   font-size: 16px;
   background-color: $bg-message-container-color;
-  font-family: "Inter", sans-serif;
-  
+  font-family: 'Inter', sans-serif;
 }
 
-@import "./contact-user-component";
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(48, 48, 48);
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(95, 95, 95);
+  border-radius: 25px;
+}
+
+@import './contact-user-component';
 
 .fas {
   color: $color-font-secondary;
@@ -43,17 +50,15 @@ li {
 main {
   display: flex;
   height: 100vh;
-  @import "_aside_bar";
+  @import '_aside_bar';
 
   @import '_contact-section';
 
   .container-messages {
     width: 55vw;
     min-width: 420px;
-    padding: 0px 20px;
+
     position: relative;
-  
-    
 
     .container-messages-header {
       z-index: 10111;
@@ -97,53 +102,49 @@ main {
       }
     }
     .messages-area {
-       
       position: relative;
       height: 100%;
       overflow-y: auto;
-      &::-webkit-scrollbar{
-          width: 6px;
-          
-          
+      &::-webkit-scrollbar {
+        width: 6px;
       }
-      &::-webkit-scrollbar-track{
-          background: rgb(48, 48, 48);
+      &::-webkit-scrollbar-track {
+        background: rgb(48, 48, 48);
       }
-      &::-webkit-scrollbar-thumb{
-          background: rgb(95, 95, 95);
-          border-radius: 25px;
+      &::-webkit-scrollbar-thumb {
+        background: rgb(95, 95, 95);
+        border-radius: 25px;
       }
 
       .user-message-area {
-          
         display: flex;
         flex-direction: row;
         padding: 5px 0px;
-        .wrapper-div{
-            .container-message-user {
-                background-color: rgb(41, 41, 41);
-                color: $color-font-ice;
-                font-size: $xx-font-small;
-                padding: 15px;
-                border-radius: 10px 10px 10px 0px;
-                max-width: 50%;
-      
-                .container-message-user-header {
-                  display: flex;
-                  justify-content: space-between;
-                  align-self: center;
-                  margin-bottom: 5px;
-                  h3 {
-                    font-weight: 600;
-                  }
-                  time {
-                  }
-                }
-      
-                article {
-                  font-weight: 400;
-                }
+        .wrapper-div {
+          .container-message-user {
+            background-color: rgb(41, 41, 41);
+            color: $color-font-ice;
+            font-size: $xx-font-small;
+            padding: 15px;
+            border-radius: 10px 10px 10px 0px;
+            max-width: 50%;
+
+            .container-message-user-header {
+              display: flex;
+              justify-content: space-between;
+              align-self: center;
+              margin-bottom: 5px;
+              h3 {
+                font-weight: 600;
               }
+              time {
+              }
+            }
+
+            article {
+              font-weight: 400;
+            }
+          }
         }
 
         img {
@@ -154,12 +155,10 @@ main {
           height: 40px;
           align-self: flex-end;
         }
-        p{
-            font-size: $xx-font-small;
-            color: $color-font-secondary;
+        p {
+          font-size: $xx-font-small;
+          color: $color-font-secondary;
         }
-
-       
       }
       .your-message-area {
         display: flex;
@@ -192,23 +191,19 @@ main {
       }
     }
 
-    
-      .input-message-area {
-        position: absolute;
-       width: 100%;
-        bottom: 10px;
-        z-index: 122;
-
-        input[type="text"] {
-          padding: 10px 15px;
-          width: 100%;
-          background-color: rgb(7, 7, 7);
-          border-radius: 5px;
-          border: none;
-          color: $color-font-ice;
-        }
-      }
-    
+    input[type='text'] {
+      position: absolute;
+      bottom: 10px;
+      padding: 10px 15px;
+      width: 90%;
+      left: 5%;
+      right: 5%;
+      background-color: rgb(7, 7, 7);
+      border-radius: 5px;
+      border: none;
+      color: $color-font-ice;
+    }
   }
   @import '_task-container';
 }
+@import '_responsive.scss';
