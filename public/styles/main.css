@@ -426,6 +426,7 @@ main .container-messages .messages-area {
   position: relative;
   height: 100%;
   overflow-y: auto;
+  padding: 0px 10px;
 }
 
 main .container-messages .messages-area::-webkit-scrollbar {
